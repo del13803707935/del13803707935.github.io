@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#a{
+				width: 100px;
+				height: 100px;
+				/*border: 1px solid red ;*/
+				position: relative;
+				/*background-color: blue;*/
+				/*border: none;*/
+				/*border: ;*/
+				/*border: ;*/
+			}
+			.b{
+				width: 2px;
+				background-color: green;
+				/*height: 99px;*/
+			}
+			.c{
+				width: 2px;
+				background-color: green;
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				
+				/*height: 99px;*/
+			}
+			.e{
+				height: 2px;
+				background-color: green;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				
+				/*height: 99px;*/
+			}
+			.f{
+				height: 2px;
+				background-color: green;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				
+				/*height: 99px;*/
+			}
+			img{
+				width: 95px;
+				height: 95px;
+				position: absolute;
+				left: 2px;
+				top: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a">
+			<img src="img/tt.jpg"/>
+			<div class="b">
+				
+			</div>
+			<div class="c">
+				
+			</div>
+			<div class="e">
+				
+			</div>
+			<div class="f">
+				
+			</div>
+		</div>
+		<button>点击</button>
+	</body>
+	<script src="lib/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		$(function(){
+         
+			$("button").click(function(){
+				
+				//第一种
+//				
+//				$(".b").stop().animate({
+//					"height":"100px"
+//				},1000)
+//			setTimeout(function() {  
+//           $(".b").hide();
+//            },1000)
+//				setTimeout(function() {
+//					$(".e").hide()
+//       $(".c").stop().animate({
+//					"height":"100px"
+//				},1000)
+//       },2000)
+//				
+//					setTimeout(function() {  
+//						$(".c").hide()
+//      $(".f").stop().animate({
+//					"width":"100px"
+//				},1000)
+//       },3000)
+//				setTimeout(function() {  
+//        $(".e").stop().animate({
+//					"width":"100px"
+//				},1000)
+//       },1000)
+		
+		
+		//第二种
+//		
+//$(".b").stop().animate({
+//					"height":"100px"
+//				},1000)
+//$(".c").stop().animate({
+//					"height":"100px"
+//				},1000)
+// $(".f").stop().animate({
+//					"width":"100px"
+//				},1000)
+//$(".e").stop().animate({
+//					"width":"100px"
+//				},1000)
+
+           //第三种
+			$(".b").stop().animate({
+					"height":"100px"
+				},1000)
+			setTimeout(function() {  
+              },1000)
+				setTimeout(function() {
+         $(".c").stop().animate({
+					"height":"100px"
+				},1000)
+         },2000)
+				
+					setTimeout(function() {  
+        $(".f").stop().animate({
+					"width":"100px"
+				},1000)
+         },3000)
+				setTimeout(function() {  
+          $(".e").stop().animate({
+					"width":"100px"
+				},1000)
+         },1000)
+
+				
+			})
+		})
+	</script>
+</html>
